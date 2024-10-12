@@ -1,0 +1,376 @@
+/* ------- IMPORTED FONTS -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*--------- CSS RESET -------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+small,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+input,
+button,
+label,
+tr,
+th,
+td,
+aside,
+footer,
+header,
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ------- ROOT VARIABLES -------------- */
+
+:root {
+    --black: #0D0D0D;
+    --grey: #F2F2F2;
+    --turq: #7abfbf;
+    --greenblue: rgba(122, 191, 191, .5);
+    --orange: #EB5428;
+}
+
+/* ------GLOBAL STYLES (mobile first/small)------*/
+
+html {
+    background-color: var(--greenblue);
+}
+
+body {
+    background-color: var(--grey);
+}
+
+h1 {
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Bebas Neue";
+    font-size: 35px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    text-align: center;
+}
+
+main {
+    font-family: "montserrat";
+    font-size: 16px;
+}
+
+dt {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "montserrat";
+}
+
+aside p {
+    font-family: "montserrat";
+    font-size: 16px;
+}
+
+aside span {
+    font-family: "monsterrat";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#ingredients {
+    margin-left: 20px;
+    display: list-item;
+}
+
+#ingredients li {
+    padding-bottom: 15px;
+}
+
+#directions {
+    margin-left: 20px;
+    display: list-item;
+}
+
+#directions li {
+    padding-bottom: 15px;
+}
+
+aside {
+    background-color: var(--turq);
+}
+
+footer {
+    font-family: "bebas neue";
+    font-size: 16px;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+
+    body img {
+        margin: auto;
+        width: 100%;
+    }
+
+    main p,
+    section {
+        padding: 10px;
+    }
+
+    nav {
+        display: none;
+        visibility: collapse;
+    }
+
+    aside h2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    aside section {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    section div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section h3 {
+        margin: 0;
+        padding-right: 150px;
+    }
+
+    section p {
+        margin: 5px 0;
+    }
+
+    section span {
+        margin-top: 10px;
+
+    }
+
+    aside img {
+        width: 150px;
+
+    }
+
+    footer img {
+        width: 200px;
+        margin: auto;
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    aside section {
+        transition: background-color 1s;
+    }
+
+    aside section:hover {
+        background-color: var(--orange);
+    }
+
+}
+
+/*------ MEDIA QUERY (medium) ----------------*/
+@media (min-width: 768px) and (max-width: 1279px) {
+    body {
+        margin: auto;
+        width: 768px;
+    }
+
+    menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+    }
+
+    nav {
+        padding-left: 5%;
+    }
+
+    menu li {
+        display: inline;
+    }
+
+    menu li a {
+
+        text-decoration: none;
+        color: var(--orange);
+        font-family: "bebas neue";
+        font-size: 20px;
+    }
+
+    menu li img {
+        width: 75px;
+        position: relative;
+
+    }
+
+    menu li:hover {
+        transform: scale(1.2);
+    }
+
+    h1 {
+        padding: 20px;
+        float: left;
+    }
+
+    #details {
+        text-align: center;
+
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    main p {
+        padding: 10px;
+    }
+
+    h2 {
+        padding: 20px;
+    }
+
+    #ingredientsGroup {
+        float: left;
+        padding-right: 50px;
+    }
+
+    #directions {
+        display: inline;
+    }
+
+    aside {
+        margin-top: 150px;
+    }
+
+    aside section {
+        transition: background-color 1s;
+    }
+
+    aside section:hover {
+        background-color: var(--orange);
+    }
+
+    aside img {
+        width: 100px;
+        float: left;
+    }
+
+    aside section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    }
+
+    footer img {
+        width: 200px;
+        padding-top: 20px;
+
+    }
+}
+
+
+/*------ MEDIA QUERY (large) -----------------*/
+
+@media (min-width: 1280px) {
+
+    body {
+        margin: auto;
+        width: 1280px;
+    }
+
+    menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    menu li {
+        display: inline;
+    }
+
+    menu li a {
+        text-decoration: none;
+        color: var(--orange);
+        font-family: "bebas neue";
+        font-size: 20px;
+    }
+
+    menu li img {
+        width: 75px;
+        position: relative;
+        top: -40px;
+        left: 70px;
+
+    }
+
+    menu li:hover {
+        transform: scale(1.2);
+    }
+
+    main img {
+        width: 600px;
+
+    }
+
+    h1 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    main p {}
+
+    aside section {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    aside section {
+        transition: background-color 1s;
+    }
+
+    aside section:hover {
+        background-color: var(--orange);
+    }
+
+}
